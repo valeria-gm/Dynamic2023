@@ -4,14 +4,11 @@
 # gmvaleriaaa@gmail.com
 # License: GNU/GLP 3.0
 
-n = 10
+def sucesion(n):
+  eval = [1/(10**x) for x in range(1, n+1)]
+  ec = ["\\frac{1}{10^{" + str(x) + "}}" for x in range(1, n+1)]
+  return eval, ec
 
-sucesion = []
 
-for i in range(1, n+1):
-  eval = 1/(10**i)
-  ec = "\\frac{1}{10^{" + str(i) + "}}"
-  sucesion.append(tuple([eval, ec]))
-
-#\frac{1}{10^{n}}
-print(sucesion)
+n = int(input("Dame n: "))
+print(sucesion(n))
